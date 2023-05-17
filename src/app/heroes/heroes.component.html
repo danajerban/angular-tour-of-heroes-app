@@ -1,0 +1,26 @@
+<!-- Initial state where we list with onSelect before and now we switch to links like below-->
+
+<!-- <h2>My Heroes</h2>
+<ul class="heroes">
+  <li *ngFor="let hero of heroes">
+    <button type="button" (click)="onSelect(hero)" [class.selected]="hero === selectedHero">
+      <span class="badge">{{hero.id}}</span>
+      <span class="name">{{hero.name}}</span>
+    </button>
+  </li>
+</ul> -->
+
+<!-- List with links -->
+<h2>My Heroes</h2>
+<ul class="heroes">
+  <li *ngFor="let hero of heroes">
+    <a routerLink="/detail/{{hero.id}}">
+      <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </a>
+  </li>
+</ul>
+
+<!--this was first here to show hero details when you click a hero but
+now we need to switch the view in the router so when you click the
+hero we go to this component 'HeroDetailComponent' and switch the view to it. -->
+<!--  <app-hero-detail [hero]="selectedHero"></app-hero-detail>  -->
