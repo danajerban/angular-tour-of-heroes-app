@@ -17,6 +17,7 @@ export class HeroService {
     return heroes;
   }
 
+  
   getHero(id: number): Observable<Hero> {
     // For now, assume that a hero with the specified `id` always exists.
     // Error handling will be added later
